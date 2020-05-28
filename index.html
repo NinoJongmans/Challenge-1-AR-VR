@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+w<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AR/VR Challenge 1</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body onload="playMovie()">
+    <a-scene background="color: #333333">
+      <a-assets>
+          <video id="extraction" autoplay loop="true" src="videos/extraction.mp4"></video>
+          
+          <a-asset-item id="chair" src="gltf/scene.gltf"></a-asset-item>
+      </a-assets>
+      
+      <a-camera>
+        <a-entity id="mouseCursor"
+          cursor="fuse: true; 
+          fuseTimeout: 500">
+        </a-entity>
+        <a-ring id="cursorRing" 
+          position="0 0 -1"
+          radius-inner= "0.01"
+          radius-outer= "0.02"
+          material="color: white; shader: flat">
+        </a-ring>
+      </a-camera>
+      
+      
+      
+      
+      
+<!--      Elements-->
+      
+      
+      <a-plane id="grond"
+         rotation="-90 0 0"
+         position="0 0 0"
+         width="20"
+         height="20"
+         color="#7BC8A4"
+         >
+      </a-plane>
+      
+      <a-plane id="bordbegin"
+         height="0.3"
+         width="0.5"
+         position="-1 1 -0.7"
+         rotation="0 10 0"
+         color="green"
+         >
+      </a-plane>
+      <a-text
+         id="tekstbegin"
+         height="0.3"
+         width="0"
+         position="-1.0 1 -0.7"
+         rotation="0 10 0"
+         value="KIJK HIER OM
+          DE FILM TE STARTEN!"
+          align="center"
+         >
+          
+      </a-text>
+      
+      <a-plane id="bordstop"
+         height="0.3"
+         width="0.5"
+         position="1 1 -0.7"
+         rotation="0 -10 0"
+         color="red"
+         >
+      </a-plane>
+      
+    
+      <a-entity
+         id="tekststop"
+         text="value: KIJK HIER OM
+         DE FILM TE STOPPEN!;
+         align: center;"
+         position="1 1 -0.7"
+         width="0.5"s
+         height="0"
+         rotation="0 -10 0"
+         
+         >
+          
+      </a-entity>
+      
+      <a-entity gltf-model="#chair"
+          position="0 0 -1"
+      ></a-entity>
+      
+      
+      <a-plane id="scherm"
+        width="5"
+        height="2.8"
+        position="0 2.4 -4"
+        rotation="0 2 0"
+        depth="1"
+        color="#ffffff" 
+        shadow>
+      </a-plane>
+      <a-video 
+        id="movie"
+        src="#extraction" 
+        width="5"
+        height="2.8"
+        position="0 2.4 -3"
+        rotation="0 2 0">
+
+        </a-video>
+      <a-plane id="achterwand"
+        width="9"
+        height="6d"
+        position="0 2 -3.01"
+        rotation="0 2 0"
+        depth="1"
+        color="#000000" 
+        shadow>
+      </a-plane>
+      <a-plane id="linkermuur"
+        width="10"
+        height="10"
+        position="-4.5 0 2"
+        rotation="0 90 0"
+        depth="1"
+        color="#000000" 
+        shadow>
+      </a-plane>
+      <a-plane id="rechtermuur"
+        width="11"
+        height="10"
+        position="4.5 0 1"
+        rotation="0 -90 0"
+        depth="1"
+        color="#000000" 
+        shadow>
+      </a-plane>s
+    
+    </a-scene>
+  </body>
+</html>
