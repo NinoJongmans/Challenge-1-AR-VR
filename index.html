@@ -11,7 +11,7 @@ w<html>
   <body onload="playMovie()">
     <a-scene background="color: #333333">
       <a-assets>
-          <video id="extraction" autoplay loop="true" src="videos/extraction.mp4"></video>
+          <video id="extraction" loop="true" src="videos/extraction.mp4"></video>
           
           <a-asset-item id="chair" src="gltf/scene.gltf"></a-asset-item>
       </a-assets>
@@ -123,7 +123,9 @@ w<html>
         width="5"
         height="2.8"
         position="0 2.4 -3"
-        rotation="0 2 0">
+        rotation="0 2 0"
+        webkit-playsinline
+        playsinline>
 
         </a-video>
       <a-plane id="achterwand"

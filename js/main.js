@@ -6,12 +6,12 @@ var stopbtn = document.getElementById("bordstop");
 
 
 document.getElementById('bordbegin').addEventListener('click', function() {
-    console.log('Test of het werkt.');
+    console.log('Film gestart');
     document.getElementById('extraction').play();
 });
 
 
 document.getElementById('bordstop').addEventListener('click', function() {
-    console.log('Pauzeer de film.');
+    console.log('Film gepauzeerd');
     document.getElementById('extraction').pause();
 })
